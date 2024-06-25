@@ -12,4 +12,6 @@ public interface ProductDao extends JpaRepository<Product, Long> {
 
     Page<Product> findByCategoryId(@Param("id") Long category, Pageable pageable);
 
+    Page<Product> findByNameContaining(@Param("keyword") String keyword, Pageable pageable);
+
 }
